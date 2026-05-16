@@ -160,29 +160,11 @@ Then restart Claude Desktop. The tool should appear in the MCP tools list.
 
 Save and restart Cursor. Tools should be available in chat.
 
-## Publish to mcp.so (MCP Registry)
+## Optional: CI and publishing
 
-To make your server discoverable on [mcp.so](https://mcp.so):
+If you'd like to publish or run this server automatically (for example to make it runnable from remote hosts or CI), consider adding CI that builds a Docker image and pushes it to a registry (GitHub Container Registry or Docker Hub). A `Dockerfile` and an example GitHub Actions workflow are included in the repository as a starting point — feel free to customize them for your preferred registry and release process.
 
-1. **Publish to PyPI** (optional, for easier installation):
-   ```bash
-   pip install build twine
-   python -m build
-   twine upload dist/*
-   ```
-
-2. **Register on mcp.so**:
-   - Visit [mcp.so](https://mcp.so)
-   - Click "Submit Server"
-   - Fill in metadata:
-     - **Name**: "Africa Energy Data MCP"
-     - **Description**: "Access Africa energy data for 54 countries (2000–2022)"
-     - **GitHub URL**: (if applicable)
-     - **PyPI Package** or **Docker Image**: Your published package
-   - Submit for review
-
-3. **GitHub Actions** (optional, for automated publishing):
-   - Create `.github/workflows/publish.yml` for automated releases
+For most users, the simplest path is to run the server locally (see "Setup" above) and connect an MCP client such as Claude Desktop or Cursor.
 
 ## Project Structure
 
