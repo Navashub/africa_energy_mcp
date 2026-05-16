@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "africa-energy": {
+      "command": "py",
+      "args": ["server.py"],
+      "description": "Run locally with Python: requires AFRICA_ENERGY_API_KEY in .env"
+    }
+  }
+}
